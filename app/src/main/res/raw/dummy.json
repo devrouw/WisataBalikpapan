@@ -1,0 +1,135 @@
+{
+  "travel": [
+    {
+      "idTravel": 1,
+      "titleTravel": "Pantai Lamaru",
+      "descTravel": "Jl. Mulawarman, Lamaru, Teritip, Kec. Balikpapan Timur, Kota Balikpapan, Kalimantan Timur.",
+      "imageTravel": "travel_pantai_lamaru"
+    },
+    {
+      "idTravel": 2,
+      "titleTravel": "Taman Tiga Generasi",
+      "descTravel": "Sepinggan, Kec. Balikpapan Selatan, Kota Balikpapan, Kalimantan Timur.",
+      "imageTravel": "travel_taman3g"
+    },
+    {
+      "idTravel": 3,
+      "titleTravel": "Monpera",
+      "descTravel": "Jl. Jenderal Sudirman No.1, RW.RT.11, Klandasan Ulu, Kec. Balikpapan Kota, Kota Balikpapan, Kalimantan Timur.",
+      "imageTravel": "travel_monpera"
+    },
+    {
+      "idTravel": 4,
+      "titleTravel": "Bukit Alpha",
+      "descTravel": "Manggar, Kec. Balikpapan Timur, Kota Balikpapan, Kalimantan Timur.",
+      "imageTravel": "travel_bukitalpha"
+    },
+    {
+      "idTravel": 5,
+      "titleTravel": "Hutan Lindung Sungai Wain",
+      "descTravel": "Jl. Soekarno Hatta Km. 15, Karang Joang, Kec. Balikpapan Utara, Kota Balikpapan, Kalimantan Timur.",
+      "imageTravel": "travel_wain"
+    }
+  ],
+  "hotel": [
+    {
+      "idHotel": 1,
+      "titleHotel": "Golden Tulip Balikpapan Hotel",
+      "descHotel": "Jalan Jendral Sudirman No 7, Klandasan Ilir, Balikpapan, Kalimantan Timur",
+      "imageHotel": "hotel_goldentulip"
+    },
+    {
+      "idHotel": 2,
+      "titleHotel": "Platinum Hotel",
+      "descHotel": "Jalan Soekarno Hatta No.28, 76125 Balikpapan",
+      "imageHotel": "hotel_platinum"
+    },
+    {
+      "idHotel": 3,
+      "titleHotel": "Swiss-Belinn Hotel",
+      "descHotel": "Jalan Jenderal Sudirman, 80555 Balikpapan",
+      "imageHotel": "hotel_swissbellin"
+    },
+    {
+      "idHotel": 4,
+      "titleHotel": "Grand Tjokro Hotel",
+      "descHotel": "Jl. Marsma R. Iswahyudi No. 21, 76115 Balikpapan",
+      "imageHotel": "hotel_tjokro"
+    },
+    {
+      "idHotel": 5,
+      "titleHotel": "Novotel",
+      "descHotel": "Jl. Brigjen Ery Suparjan No. 2, 76112 Balikpapan",
+      "imageHotel": "hotel_novotel"
+    }
+  ],
+  "food": [
+    {
+      "idFood": 1,
+      "titleFood": "Roti Mantau",
+      "descFood": "Mantau atau dikenal pula dengan Roti Sepan memiliki bentuk seperti bakpao. Bedanya, Mantau tidak berisi daging, cokelat, atau lainnya.",
+      "imageFood": "food_mantau"
+    },
+    {
+      "idFood": 2,
+      "titleFood": "Amplang",
+      "descFood": "Amplang adalah makanan berjenis kerupuk khas Balikpapan.",
+      "imageFood": "food_amplang"
+    },
+    {
+      "idFood": 3,
+      "titleFood": "Pisang Gapit",
+      "descFood": "Nama ‘gapit’ adalah istilah Bahasa Kutai atau banjar yang berarti dijepit. Selain dijepit, pisang yang sudah setengah matang ini dibakar hingga mengeluarkan aroma harum.",
+      "imageFood": "food_gapit"
+    },
+    {
+      "idFood": 4,
+      "titleFood": "Kue Ilat Sapi",
+      "descFood": "Meskipun bernama lidah sapi namun bukan berarti bahan yang digunakan berasa dari bagian tubuh sapi.",
+      "imageFood": "food_ilat"
+    }
+  ],
+  "event": [
+    {
+      "idEvent": 1,
+      "titleEvent": "Balikpapan Fest 2020",
+      "descEvent": "Senin, 3 Februari 2020",
+      "imageEvent": "event_bfest"
+    },
+    {
+      "idEvent": 2,
+      "titleEvent": "Wali Kota Cup 2021",
+      "descEvent": "Sabtu, 5 Juni 2021",
+      "imageEvent": "event_wkc"
+    }
+  ],
+  "accommodation": [
+    {
+      "idAccommodation": 1,
+      "titleAccommodation": "Gojek",
+      "descAccommodation": "Gojek merupakan sebuah perusahaan teknologi asal Indonesia yang melayani angkutan melalui jasa ojek.",
+      "imageAccommodation": "acc_gojek"
+    },
+    {
+      "idAccommodation": 2,
+      "titleAccommodation": "Gojek",
+      "descAccommodation": "Grab merupakan salah satu platform layanan on demand yang bermarkas di Singapura.",
+      "imageAccommodation": "acc_grab"
+    },
+    {
+      "idAccommodation": 3,
+      "titleAccommodation": "Rental Mobil Balikpapan",
+      "descAccommodation": "Perusahaan Jasa Sewa Mobil Murah di Balikpapan",
+      "imageAccommodation": "acc_rmb"
+    }
+  ],
+  "about": [
+    {
+      "name": "Dinas Pemuda, Olahraga dan Pariwisata Kota Balikpapan",
+      "address": "Jalan Marsma R. Iswahyudi No. 121",
+      "contact": "Telp : (0542)761111\nEmail : dpokp.balikpapan@gmail.com",
+      "vision": "Terwujudnya daerah Balikpapan sebagai daerah tujuan wisata unggulan berbasis budaya multi etnis dan berwawasan lingkungan serta memberdayakan potensi pemuda",
+      "mission": "1. Pengembangan pariwisata berwawasan lingkungan\n2. Pengembangan peran serta kepemudaan\n3. Pengembangaan dan peningkatan prestasi olahraga"
+    }
+  ]
+}

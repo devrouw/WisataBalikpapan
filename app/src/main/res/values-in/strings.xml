@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Wisata Balikpapan</string>
+    <string name="backdrop">Backdrop</string>
+    <string name="title">Wisata Kota Balikpapan</string>
+    <string name="price">Harga</string>
+    <string name="location">Lokasi</string>
+    <string name="travel">Wisata</string>
+    <string name="hotel">Hotel</string>
+    <string name="food">Kuliner</string>
+    <string name="event">Event</string>
+    <string name="accommodation">Akomodasi</string>
+    <string name="about">Tentang</string>
+    <string name="address">Alamat</string>
+    <string name="contact">Kontak</string>
+    <string name="vision">Visi</string>
+    <string name="mission">Misi</string>
+    <string name="email">Email</string>
+    <string name="password">Kata sandi</string>
+    <string name="login">Masuk</string>
+    <string name="register">Daftar</string>
+</resources>

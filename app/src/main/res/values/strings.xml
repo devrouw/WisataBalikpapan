@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Balikpapan Tourism</string>
+    <string name="backdrop">Backdrop</string>
+    <string name="title">Balikpapan Tourism</string>
+    <string name="travel">Travel</string>
+    <string name="price">Price</string>
+    <string name="location">Location</string>
+    <string name="hotel">Hotel</string>
+    <string name="food">Food</string>
+    <string name="event">Event</string>
+    <string name="accommodation">Accommodation</string>
+    <string name="about">About</string>
+    <string name="lipsum" translatable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac urna a eros ultricies dapibus in tincidunt justo. Phasellus semper.</string>
+    <string name="address">Address</string>
+    <string name="contact">Contact</string>
+    <string name="vision">Vision</string>
+    <string name="mission">Mission</string>
+    <string name="actionbar_title" translatable="false">List %s</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="txt_name">Name</string>
+</resources>

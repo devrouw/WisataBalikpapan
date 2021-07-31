@@ -18,8 +18,6 @@ import java.util.Objects;
  * */
 public class MainActivity extends AppCompatActivity  {
 
-    Config session;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,12 +67,5 @@ public class MainActivity extends AppCompatActivity  {
             Intent intent = new Intent(this, AboutActivity.class);
             startActivity(intent);
         });
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        session = new Config(getApplicationContext());
-        session.checkLogin();
     }
 }

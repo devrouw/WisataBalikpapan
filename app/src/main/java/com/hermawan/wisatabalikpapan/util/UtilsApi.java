@@ -4,7 +4,7 @@ import android.content.Context;
 
 public class UtilsApi {
     // URL API.
-    public static final String BASE_URL_API = "http://pariwisata.sha-dev.com/android/";
+    public static final String BASE_URL_API = "http://pariwisatabpn.com/android/";
 
     // Mendeklarasikan Interface BaseApiService
     public static BaseApiService getAPIService(Context mContext){

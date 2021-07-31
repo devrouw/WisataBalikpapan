@@ -18,6 +18,7 @@ import com.hermawan.wisatabalikpapan.data.entity.Hotel;
 import com.hermawan.wisatabalikpapan.databinding.ActivityDetailBinding;
 import com.hermawan.wisatabalikpapan.model.Travel;
 import com.hermawan.wisatabalikpapan.util.Constant;
+import com.hermawan.wisatabalikpapan.util.DateFormat;
 
 import java.util.Objects;
 /*
@@ -49,6 +50,12 @@ public class DetailActivity extends AppCompatActivity {
             switch (type){
                 case "Travel":
                 case "Accommodation":
+                    //Make layout invisible
+                    binding.cvLokasi.setVisibility(View.GONE);
+                    binding.llLocation.setVisibility(View.GONE);
+                    binding.btnOrder.setVisibility(View.GONE);
+                    //---------------------
+
                     Travel travel = getIntent().getParcelableExtra(EXTRA_DATA);
                     Glide.with(this)
                             .load(Constant.IMAGE_TRAVEL + travel.getGambar())
@@ -57,12 +64,16 @@ public class DetailActivity extends AppCompatActivity {
                     binding.tvHarga.setText(travel.getHarga());
                     binding.tvTitleDetail.setText(travel.getNama());
                     binding.tvDescDetail.setText(travel.getDeskripsi());
-                    binding.ivMap.setOnClickListener(v -> {
-                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(travel.getLink()));
-                        startActivity(browserIntent);
-                    });
+//                    binding.ivMap.setOnClickListener(v -> {
+//                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(travel.getLink()));
+//                        startActivity(browserIntent);
+//                    });
                     break;
                 case "Hotel":
+                    //Make layout invisible
+                    binding.cvLokasi.setVisibility(View.GONE);
+                    //---------------------
+
                     Travel hotel = getIntent().getParcelableExtra(EXTRA_DATA);
                     Glide.with(this)
                             .load(Constant.IMAGE_HOTEL + hotel.getGambar())
@@ -75,34 +86,63 @@ public class DetailActivity extends AppCompatActivity {
                         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(hotel.getLink()));
                         startActivity(browserIntent);
                     });
+                    binding.btnOrder.setOnClickListener(v -> {
+                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(hotel.getLinkOrder()));
+                        startActivity(browserIntent);
+                    });
                     break;
                 case "Food":
+                    //Make layout invisible
+                    binding.cvLokasi.setVisibility(View.GONE);
+                    binding.llPrices.setVisibility(View.GONE);
+                    //---------------------
+
                     Travel food = getIntent().getParcelableExtra(EXTRA_DATA);
                     Glide.with(this)
                             .load(Constant.IMAGE_FOOD + food.getGambar())
                             .into(binding.ivImageDetail);
                     binding.tvAddress.setText(food.getAlamat());
-                    binding.tvHarga.setText(food.getHarga());
+//                    binding.tvHarga.setText(food.getHarga());
                     binding.tvTitleDetail.setText(food.getNama());
                     binding.tvDescDetail.setText(food.getDeskripsi());
                     binding.ivMap.setOnClickListener(v -> {
                         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(food.getLink()));
                         startActivity(browserIntent);
                     });
+                    binding.btnOrder.setOnClickListener(v -> {
+                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(food.getLinkOrder()));
+                        startActivity(browserIntent);
+                    });
                     break;
                 case "Event":
+                    //Make layout invisible
+                    binding.llContent2.setVisibility(View.GONE);
+                    binding.btnOrder.setVisibility(View.GONE);
+                    //---------------------
+
                     Travel event = getIntent().getParcelableExtra(EXTRA_DATA);
                     Glide.with(this)
                             .load(Constant.IMAGE_EVENT + event.getGambar())
                             .into(binding.ivImageDetail);
-                    binding.tvAddress.setText(event.getAlamat());
-                    binding.tvHarga.setText(event.getHarga());
-                    binding.tvTitleDetail.setText(event.getNama());
+                    binding.tvTitleDetail.setText(event.getJudul());
                     binding.tvDescDetail.setText(event.getDeskripsi());
-                    binding.ivMap.setOnClickListener(v -> {
-                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(event.getLink()));
-                        startActivity(browserIntent);
-                    });
+                    binding.tvLokasi.setText(event.getLokasi());
+
+                    //Parsing time
+                    if(event.getWaktu()!= null){
+                        DateFormat dateFormat = new DateFormat();
+                        binding.tvDate.setText(dateFormat.localeDateParseDay(event.getWaktu()));
+                        binding.tvMonth.setText(dateFormat.localeDateParseMonth(event.getWaktu()));
+                        binding.tvTime.setText(dateFormat.localeTimeWithoutMinutes(event.getWaktu()));
+                    }
+//                    binding.tvAddress.setText(event.getAlamat());
+//                    binding.tvHarga.setText(event.getHarga());
+//                    binding.ivMap.setOnClickListener(v -> {
+//                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(event.getLink()));
+//                        startActivity(browserIntent);
+//                    });
+
+
                     break;
             }
         }

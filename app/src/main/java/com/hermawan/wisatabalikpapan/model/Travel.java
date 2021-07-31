@@ -10,14 +10,22 @@ public class Travel implements Parcelable {
     private String id;
     @SerializedName("nama")
     private String nama;
+    @SerializedName("judul")
+    private String judul;
     @SerializedName("alamat")
     private String alamat;
+    @SerializedName("lokasi")
+    private String lokasi;
     @SerializedName("gambar")
     private String gambar;
     @SerializedName("harga")
     private String harga;
     @SerializedName("link")
     private String link;
+    @SerializedName("waktu")
+    private String waktu;
+    @SerializedName("link_order")
+    private String linkOrder;
     @SerializedName("deskripsi")
     private String deskripsi;
     @SerializedName("slug")
@@ -32,6 +40,10 @@ public class Travel implements Parcelable {
         link = in.readString();
         deskripsi = in.readString();
         slug = in.readString();
+        judul = in.readString();
+        lokasi = in.readString();
+        waktu = in.readString();
+        linkOrder = in.readString();
     }
 
     public static final Creator<Travel> CREATOR = new Creator<Travel>() {
@@ -110,10 +122,43 @@ public class Travel implements Parcelable {
         this.slug = slug;
     }
 
+    public String getJudul() {
+        return judul;
+    }
+
+    public void setJudul(String judul) {
+        this.judul = judul;
+    }
+
+    public String getLokasi() {
+        return lokasi;
+    }
+
+    public void setLokasi(String lokasi) {
+        this.lokasi = lokasi;
+    }
+
+    public String getWaktu() {
+        return waktu;
+    }
+
+    public void setWaktu(String waktu) {
+        this.waktu = waktu;
+    }
+
+    public String getLinkOrder() {
+        return linkOrder;
+    }
+
+    public void setLinkOrder(String linkOrder) {
+        this.linkOrder = linkOrder;
+    }
+
     @Override
     public int describeContents() {
         return 0;
     }
+
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
@@ -125,5 +170,9 @@ public class Travel implements Parcelable {
         dest.writeString(link);
         dest.writeString(deskripsi);
         dest.writeString(slug);
+        dest.writeString(judul);
+        dest.writeString(lokasi);
+        dest.writeString(waktu);
+        dest.writeString(linkOrder);
     }
 }

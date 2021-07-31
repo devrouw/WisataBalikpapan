@@ -4,174 +4,213 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_1"
     tools:context=".ui.MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:contentDescription="@string/backdrop"
-        android:src="@drawable/backdrop"
-        android:scaleType="centerCrop"
-        app:layout_constraintDimensionRatio="H,1.5:1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:contentDescription="@string/backdrop"-->
+<!--        android:src="@drawable/backdrop"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        app:layout_constraintDimensionRatio="H,1.5:1"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="325dp"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="130dp"
         android:text="@string/title"
+        android:fontFamily="@font/latoblack"
         android:textAlignment="center"
         android:textSize="30sp"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
-    <ImageButton
-        android:id="@+id/btn_travel"
-        style="@style/Widget.AppCompat.Button.Colored"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_travel"
         android:layout_width="150dp"
-        android:layout_height="75dp"
+        android:layout_height="80dp"
         android:layout_marginTop="16dp"
-        android:backgroundTint="@color/pink_500"
-        android:contentDescription="@string/travel"
-        android:src="@drawable/ic_baseline_map_48"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="4dp"
         app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:tint="@color/black" />
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+        <ImageButton
+            android:id="@+id/btn_travel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_gravity="top"
+            android:paddingTop="8dp"
+            android:contentDescription="@string/travel"
+            android:src="@drawable/ic_travel" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/travel"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/btn_travel"
-        app:layout_constraintStart_toStartOf="@+id/btn_travel"
-        app:layout_constraintTop_toBottomOf="@+id/btn_travel" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center_horizontal"
+            android:text="@string/travel"
+            android:fontFamily="@font/latomedium"
+            android:textSize="15sp" />
+    </androidx.cardview.widget.CardView>
 
-    <ImageButton
-        android:id="@+id/btn_hotel"
-        style="@style/Widget.AppCompat.Button.Colored"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_hotel"
         android:layout_width="150dp"
-        android:layout_height="75dp"
+        android:layout_height="80dp"
         android:layout_marginTop="16dp"
-        android:backgroundTint="@color/pink_500"
-        android:contentDescription="@string/hotel"
-        android:src="@drawable/ic_baseline_hotel_48"
+        app:cardCornerRadius="4dp"
         app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:tint="@color/black" />
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+        <ImageButton
+            android:id="@+id/btn_hotel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_gravity="top"
+            android:paddingTop="8dp"
+            android:contentDescription="@string/hotel"
+            android:src="@drawable/ic_hotel" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hotel"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/btn_hotel"
-        app:layout_constraintStart_toStartOf="@+id/btn_hotel"
-        app:layout_constraintTop_toBottomOf="@+id/btn_hotel" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hotel"
+            android:textSize="15sp"
+            android:layout_gravity="bottom"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/latomedium"/>
 
-    <ImageButton
-        android:id="@+id/btn_food"
-        style="@style/Widget.AppCompat.Button.Colored"
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_food"
         android:layout_width="150dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/pink_500"
-        android:contentDescription="@string/food"
-        android:src="@drawable/ic_baseline_fastfood_48"
-        app:layout_constraintStart_toStartOf="@+id/btn_travel"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:tint="@color/black" />
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/cv_travel">
+        <ImageButton
+            android:id="@+id/btn_food"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="top"
+            android:background="@null"
+            android:contentDescription="@string/food"
+            android:src="@drawable/ic_food" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/food"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/btn_food"
-        app:layout_constraintStart_toStartOf="@+id/btn_food"
-        app:layout_constraintTop_toBottomOf="@+id/btn_food" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/food"
+            android:layout_gravity="bottom"
+            android:gravity="center_horizontal"
+            android:textSize="15sp"
+            android:fontFamily="@font/latomedium"/>
+    </androidx.cardview.widget.CardView>
 
-    <ImageButton
-        android:id="@+id/btn_event"
-        style="@style/Widget.AppCompat.Button.Colored"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_event"
         android:layout_width="150dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/pink_500"
-        android:contentDescription="@string/event"
-        android:src="@drawable/ic_baseline_event_48"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="4dp"
         app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:tint="@color/black" />
+        app:layout_constraintTop_toBottomOf="@+id/cv_hotel">
+        <ImageButton
+            android:id="@+id/btn_event"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="top"
+            android:background="@null"
+            android:contentDescription="@string/event"
+            android:src="@drawable/ic_event" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/event"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/btn_event"
-        app:layout_constraintStart_toStartOf="@+id/btn_event"
-        app:layout_constraintTop_toBottomOf="@+id/btn_event" />
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/event"
+            android:layout_gravity="bottom"
+            android:gravity="center_horizontal"
+            android:textSize="15sp"
+            android:fontFamily="@font/latomedium"/>
+    </androidx.cardview.widget.CardView>
 
-    <ImageButton
-        android:id="@+id/btn_accommodation"
-        style="@style/Widget.AppCompat.Button.Colored"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_accomodation"
         android:layout_width="150dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/pink_500"
-        android:contentDescription="@string/accommodation"
-        android:src="@drawable/ic_baseline_directions_car_48"
-        app:layout_constraintStart_toStartOf="@+id/btn_food"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:tint="@color/black" />
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/cv_food">
+        <ImageButton
+            android:id="@+id/btn_accommodation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="top"
+            android:background="@null"
+            android:contentDescription="@string/accommodation"
+            android:src="@drawable/ic_accomodation" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/accommodation"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/btn_accommodation"
-        app:layout_constraintStart_toStartOf="@+id/btn_accommodation"
-        app:layout_constraintTop_toBottomOf="@+id/btn_accommodation" />
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/accommodation"
+            android:layout_gravity="bottom"
+            android:gravity="center_horizontal"
+            android:textSize="15sp"
+            android:fontFamily="@font/latomedium"/>
 
-    <ImageButton
-        android:id="@+id/btn_about"
-        style="@style/Widget.AppCompat.Button.Colored"
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_about"
         android:layout_width="150dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/pink_500"
-        android:contentDescription="@string/about"
-        android:src="@drawable/ic_baseline_info_48"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="4dp"
         app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:tint="@color/black" />
+        app:layout_constraintTop_toBottomOf="@+id/cv_event">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/about"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/btn_about"
-        app:layout_constraintStart_toStartOf="@+id/btn_about"
-        app:layout_constraintTop_toBottomOf="@+id/btn_about" />
+        <ImageButton
+            android:id="@+id/btn_about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="top"
+            android:background="@null"
+            android:contentDescription="@string/about"
+            android:src="@drawable/ic_about" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/about"
+            android:layout_gravity="bottom"
+            android:gravity="center_horizontal"
+            android:textSize="15sp"
+            android:fontFamily="@font/latomedium"/>
+
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,4 +8,6 @@
     <color name="blue_700">#0094cc</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="black_fade">#4D000000</color>
+    <color name="white_fade">#B3FFFFFF</color>
 </resources>

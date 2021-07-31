@@ -15,13 +15,15 @@
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.WisataBalikpapan"
         tools:ignore="AllowBackup">
-        <activity android:name=".ui.MainActivity">
+        <activity android:name=".ui.SplashActivity"
+            android:theme="@style/Theme.WisataBalikpapan.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".ui.list.DetailActivity" />
+        <activity android:name=".ui.MainActivity" />
         <activity android:name=".ui.list.ListActivity" />
         <activity android:name=".ui.about.AboutActivity" />
         <activity android:name=".ui.LoginActivity" />

@@ -2,6 +2,7 @@ package com.hermawan.wisatabalikpapan.ui.list.adapter;
 
 import android.content.Intent;
 import android.os.Parcelable;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -87,8 +88,8 @@ public class TravelAdapter extends RecyclerView.Adapter<TravelAdapter.ListViewHo
                             .into(binding.ivImage);
                     break;
             }
-            binding.tvTitle.setText(data.getNama());
-            binding.tvDesc.setText(data.getDeskripsi());
+            binding.tvTitle.setText(Html.fromHtml(data.getNama()));
+            binding.tvDesc.setText(Html.fromHtml(data.getDeskripsi()));
 
             //Fungsi ketika klik data pada list dan ditampilkan ke menu detail
             itemView.setOnClickListener(v -> {

@@ -26,6 +26,8 @@ public class Travel implements Parcelable {
     private String waktu;
     @SerializedName("link_order")
     private String linkOrder;
+    @SerializedName("link_lokasi")
+    private String linkLokasi;
     @SerializedName("deskripsi")
     private String deskripsi;
     @SerializedName("slug")
@@ -44,6 +46,7 @@ public class Travel implements Parcelable {
         lokasi = in.readString();
         waktu = in.readString();
         linkOrder = in.readString();
+        linkLokasi = in.readString();
     }
 
     public static final Creator<Travel> CREATOR = new Creator<Travel>() {
@@ -154,6 +157,14 @@ public class Travel implements Parcelable {
         this.linkOrder = linkOrder;
     }
 
+    public String getLinkLokasi() {
+        return linkLokasi;
+    }
+
+    public void setLinkLokasi(String linkLokasi) {
+        this.linkLokasi = linkLokasi;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -174,5 +185,6 @@ public class Travel implements Parcelable {
         dest.writeString(lokasi);
         dest.writeString(waktu);
         dest.writeString(linkOrder);
+        dest.writeString(linkLokasi);
     }
 }

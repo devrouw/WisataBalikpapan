@@ -56,11 +56,11 @@ public class MainActivity extends AppCompatActivity  {
         });
 
         //Kode pada tombol akomodasi
-        binding.btnAccommodation.setOnClickListener(v -> {
-            Intent intent = new Intent(this, ListActivity.class);
-            intent.putExtra(ListActivity.EXTRA_TYPE, "Accommodation");
-            startActivity(intent);
-        });
+//        binding.btnAccommodation.setOnClickListener(v -> {
+//            Intent intent = new Intent(this, ListActivity.class);
+//            intent.putExtra(ListActivity.EXTRA_TYPE, "Accommodation");
+//            startActivity(intent);
+//        });
 
         //Kode pada tombol about
         binding.btnAbout.setOnClickListener(v -> {

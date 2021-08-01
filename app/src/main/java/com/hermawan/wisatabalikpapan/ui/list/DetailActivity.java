@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -52,7 +53,6 @@ public class DetailActivity extends AppCompatActivity {
                 case "Accommodation":
                     //Make layout invisible
                     binding.cvLokasi.setVisibility(View.GONE);
-                    binding.llLocation.setVisibility(View.GONE);
                     binding.btnOrder.setVisibility(View.GONE);
                     //---------------------
 
@@ -63,11 +63,11 @@ public class DetailActivity extends AppCompatActivity {
                     binding.tvAddress.setText(travel.getAlamat());
                     binding.tvHarga.setText(travel.getHarga());
                     binding.tvTitleDetail.setText(travel.getNama());
-                    binding.tvDescDetail.setText(travel.getDeskripsi());
-//                    binding.ivMap.setOnClickListener(v -> {
-//                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(travel.getLink()));
-//                        startActivity(browserIntent);
-//                    });
+                    binding.tvDescDetail.setText(Html.fromHtml(travel.getDeskripsi()));
+                    binding.ivMap.setOnClickListener(v -> {
+                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(travel.getLinkLokasi()));
+                        startActivity(browserIntent);
+                    });
                     break;
                 case "Hotel":
                     //Make layout invisible
@@ -81,9 +81,9 @@ public class DetailActivity extends AppCompatActivity {
                     binding.tvAddress.setText(hotel.getAlamat());
                     binding.tvHarga.setText(hotel.getHarga());
                     binding.tvTitleDetail.setText(hotel.getNama());
-                    binding.tvDescDetail.setText(hotel.getDeskripsi());
+                    binding.tvDescDetail.setText(Html.fromHtml(hotel.getDeskripsi()));
                     binding.ivMap.setOnClickListener(v -> {
-                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(hotel.getLink()));
+                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(hotel.getLinkLokasi()));
                         startActivity(browserIntent);
                     });
                     binding.btnOrder.setOnClickListener(v -> {
@@ -104,9 +104,9 @@ public class DetailActivity extends AppCompatActivity {
                     binding.tvAddress.setText(food.getAlamat());
 //                    binding.tvHarga.setText(food.getHarga());
                     binding.tvTitleDetail.setText(food.getNama());
-                    binding.tvDescDetail.setText(food.getDeskripsi());
+                    binding.tvDescDetail.setText(Html.fromHtml(food.getDeskripsi()));
                     binding.ivMap.setOnClickListener(v -> {
-                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(food.getLink()));
+                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(food.getLinkLokasi()));
                         startActivity(browserIntent);
                     });
                     binding.btnOrder.setOnClickListener(v -> {
@@ -125,7 +125,7 @@ public class DetailActivity extends AppCompatActivity {
                             .load(Constant.IMAGE_EVENT + event.getGambar())
                             .into(binding.ivImageDetail);
                     binding.tvTitleDetail.setText(event.getJudul());
-                    binding.tvDescDetail.setText(event.getDeskripsi());
+                    binding.tvDescDetail.setText(Html.fromHtml(event.getDeskripsi()));
                     binding.tvLokasi.setText(event.getLokasi());
 
                     //Parsing time

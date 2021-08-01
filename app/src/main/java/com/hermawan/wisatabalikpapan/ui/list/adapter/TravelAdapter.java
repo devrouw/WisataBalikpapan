@@ -88,7 +88,12 @@ public class TravelAdapter extends RecyclerView.Adapter<TravelAdapter.ListViewHo
                             .into(binding.ivImage);
                     break;
             }
-            binding.tvTitle.setText(Html.fromHtml(data.getNama()));
+            if(_type.equals("Event")){
+                binding.tvTitle.setText(Html.fromHtml(data.getJudul()));
+            }else{
+                binding.tvTitle.setText(Html.fromHtml(data.getNama()));
+            }
+
             binding.tvDesc.setText(Html.fromHtml(data.getDeskripsi()));
 
             //Fungsi ketika klik data pada list dan ditampilkan ke menu detail
